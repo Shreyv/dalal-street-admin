@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    /* price update logic */
     $("#myTable").on('click','.bprice',function(){
         var currentRow = $(this).closest("tr");
         var company = currentRow.find("td:eq(0)").text();
@@ -25,5 +26,33 @@ $(document).ready(function () {
               }
           });
       }
+    })
+    /* volume update logic */
+    $("#myTable").on('click','.bvolume',function(){
+        var currentRow = $(this).closest("tr");
+        var company = currentRow.find("td:eq(0)").text();
+        var ncell=currentRow.find("td:eq(4)");
+        var nvolume;
+        ncell.find('input').each(function() {
+            nvolume=$(this).val();
+        })
+        nvolume=parseInt(nvolume);
+        if(isNaN(nvolume) || nvolume==0){
+            alert("Invalid entry");
+        }
+        else {
+            var d1 = {"company": company, "volume": nvolume};
+            $.ajax({
+                url: 'http://192.168.0.107:8000/admin/volume',
+                type: 'post',
+                data: JSON.stringify(d1),
+                dataType: 'json',
+                success: function (d2) {
+                    var x = d2["message"];
+                    alert(x);
+                    location.reload();
+                }
+            });
+        }
     })
 })

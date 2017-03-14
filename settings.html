@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/settings.css">
+    <script src="js/settings.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse" style="background: #3e515b; border:none;margin-bottom: 5px;">
+    <div class="container-fluid">
+        <div class="navbar-header" >
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="nav_selected"><a href="index.html" style="color: #fff;font-size: 18px">Dashboard</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="settings.html" style="color: #fff;font-size: 18px">Settings</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" style="font-size: 18px;color: #FFF">
+                    Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="buttoncont">
+<input type="button" value="Add News" id="addnews">
+<input type="button" value="Add User" id="adduser">
+<input type="button" value="Get User Details" id="getuser">
+    <input type="button" value="Set on/off automatic" id="automatic">
+</div>
+<hr style="color: #1b6d85">
+<div id="news" style="margin-left: 500px">
+    <span>Select Option</span><select id="type">
+        <option value="market">Market</option>
+        <option value="ShareKhan">ShareKhan</option>
+        <option value="Angel Broking">Angel Broking</option>
+        <option value="IndiaBulls">IndiaBulls</option>
+    </select><br>
+    <textarea style="margin-top: 10px" rows="4" cols="50" placeholder="Enter message here" id="message"></textarea><br>
+    <input type="button" value="submit" id="nsubmit">
+</div>
+<div id="add" style="margin-left: 400px">
+    <span>Enter Name</span><input type="text" required id="uname">
+    <span>Enter Mobile number</span><input type="text" required id="umob">
+    <input type="button" value="submit" id="usubmit">
+</div>
+<div id="getu" style="margin-left: 400px">
+    <input type="text" placeholder="Enter mobile number" id="mobile" style="margin-top: 20px"> <input type="button" value="submit" id="getuserd"><br>
+    <span>Name:</span><p id="username"></p>
+    <span>Password:</span><p id="userpassword"></p>
+</div>
+</body>
+</html>
