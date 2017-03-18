@@ -15,7 +15,7 @@ $(document).ready(function () {
       else{
           var d1={"company":company,"price":nprice};
           $.ajax({
-              url: 'http://192.168.0.107:8000/admin/price',
+              url: rurl+'admin/price',
               type: 'post',
               data: JSON.stringify(d1),
               dataType: 'json',
@@ -43,7 +43,7 @@ $(document).ready(function () {
         else {
             var d1 = {"company": company, "volume": nvolume};
             $.ajax({
-                url: 'http://192.168.0.107:8000/admin/volume',
+                url: rurl+'admin/volume',
                 type: 'post',
                 data: JSON.stringify(d1),
                 dataType: 'json',
