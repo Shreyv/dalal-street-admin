@@ -1,1 +1,1 @@
-# dalal-street-admin
+# dalal-street-admin for virtual stock market gamw
