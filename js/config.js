@@ -1,1 +1,1 @@
-var rurl = "localhost:8000/";
+var rurl = "http://localhost:8000/";
