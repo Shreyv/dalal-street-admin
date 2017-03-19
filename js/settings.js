@@ -1,15 +1,23 @@
 $(document).ready(function(){
-    $("#news").hide();
-    $("#add").hide();
-    $("#getu").hide();
+   hideall();
 $("#addnews").click(function(){
-    $("#news").toggle();
+    hideall();
+    $("#news").show();
     })
 $("#adduser").click(function(){
-    $("#add").toggle();
+    hideall();
+    $("#add").show();
 })
 $("#getuser").click(function(){
-    $("#getu").toggle();
+    hideall();
+    $("#username").text("");
+    $("#userpassword").text("");
+    $("#getu").show();
+
+})
+$("#count").click(function () {
+    hideall();
+    $("#getc").show();
 })
     /* news submit */
     $("#nsubmit").click(function(){
@@ -52,6 +60,11 @@ $("#getuser").click(function(){
         })
     })
 
-
+    function hideall(){
+        $("#news").hide();
+        $("#add").hide();
+        $("#getu").hide();
+        $("#getc").hide();
+    }
 })
 
