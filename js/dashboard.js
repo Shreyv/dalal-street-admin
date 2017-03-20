@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var table=document.getElementById("myTable");
     var row,cell1,cell2,cell3,cell4,cell5,cell6,cell7,cell8,cell9,x;
-    $.getJSON(rurl+"admin/dashboard", function (data){
+    $.getJSON(rurl+"admin/dashboard ", function (data){
         var d=data["message"];
         for (x=0;x<d.length;x++) {
             row = table.insertRow(1);

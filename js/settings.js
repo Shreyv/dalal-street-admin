@@ -59,7 +59,16 @@ $("#count").click(function () {
             $("#userpassword").text(d["message"]["password"]);
         })
     })
-
+    /* get count */
+    $("#count").click(function(){
+        var url=rurl+"count";
+        $.get(url,function(d){
+            $("#users").text(d["message"]["user"]);
+            $("#angel").text(d["message"]["Angel Broking"]);
+            $("#india").text(d["message"]["IndiaBulls"]);
+            $("#share").text(d["message"]["ShareKhan"]);
+        })
+    })
     function hideall(){
         $("#news").hide();
         $("#add").hide();
