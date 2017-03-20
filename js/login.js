@@ -1,17 +1,17 @@
 $(document).ready(function(){
-    var token = localStorage.getItem("token");
-    $("#logout").css("cursor", "pointer");
-    if (token == null) {
-        window.location.href = "index.html";
-    }
-    else {
-        $.ajaxSetup({
-            headers: {
-                'Authorization': token
-            },
-            crossDomain: true
-        });
-    }
+    //var token = localStorage.getItem("token");
+    //$("#logout").css("cursor", "pointer");
+    //if (token == null) {
+    //    window.location.href = "index.html";
+    //}
+    //else {
+    //    $.ajaxSetup({
+    //        headers: {
+    //            'Authorization': token
+    //        },
+    //        crossDomain: true
+    //    });
+    //}
     $("#sub").click(function () {
         var user=$("#userid").val();
         var pass=$("#password").val();

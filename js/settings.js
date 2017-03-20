@@ -28,10 +28,16 @@ $("#count").click(function () {
         }
         else{
             var d1={"broker":broker,"message":message};
-            $.post(rurl+"add_news",JSON.stringify(d1),function(d){
-                alert(d["message"]);
-            })
-            location.reload();
+            $.ajax({
+                url: rurl+'add_news',
+                type: 'post',
+                data: JSON.stringify(d1),
+                dataType: 'json',
+                success: function (d2) {
+                    var x = d2["message"];
+                    alert(x);
+                }
+            });
         }
 
     })
@@ -44,11 +50,17 @@ $("#count").click(function () {
         }
         else{
             var d1={"user_id":mobile,"name":name};
-            $.post(rurl+"admin/user",JSON.stringify(d1),function(d){
-                alert(d["message"]);
+            $.ajax({
+                url: rurl+"admin/user",
+                type: 'post',
+                data: JSON.stringify(d1),
+                dataType: 'json',
+                success: function (d2) {
+                    var x = d2["message"];
+                    alert(x);
+                }
             });
         }
-        location.reload();
     })
     /* get user */
     $("#getuserd").click(function(){
