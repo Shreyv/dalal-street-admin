@@ -29,6 +29,7 @@ $(document).ready(function(){
                 success: function (d2) {
                     if (d2["status"] == 200 || d2["status"] == 555 || d2["status"]== 666) {
                         localStorage.setItem("atoken", d2["message"]);
+                        localStorage.setItem("amobile",user);
                         window.location.replace("dashboard.html");
                     }
                     else {

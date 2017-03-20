@@ -14,14 +14,14 @@ $(document).ready(function () {
         });
     }
     $("#logout").click(function () {
-        var d1 = {"user_id": localStorage.getItem("mobile"),"type":"admin"};
+        var d1 = {"user_id": localStorage.getItem("amobile")};
         $.ajax({
-            url: rurl + 'logout',
+            url: rurl + 'admin/logout',
             type: 'post',
             data: JSON.stringify(d1),
             dataType: 'json',
             success: function (d2) {
-                    localStorage.removeItem("mobile");
+                    localStorage.removeItem("amobile");
                     localStorage.removeItem("atoken");
                     window.location.replace("index.html");
             }
